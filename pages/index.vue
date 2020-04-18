@@ -88,7 +88,7 @@
     }
 
     span{
-      color: $primary-color;
+      color: $title-color;
       text-transform: uppercase;
     }
   }
