@@ -1,6 +1,6 @@
 # thecovidsurvivalguide
 
-> My excellent Nuxt.js project
+> A blog for the Covid-19 2020 pandemic
 
 ## Build Setup
 
