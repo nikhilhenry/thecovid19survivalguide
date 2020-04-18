@@ -3,7 +3,7 @@
     <header>
       <div class="container">
         <div class="navbar">
-          <nuxt-link to="/" class="logo">E4J</nuxt-link>
+          <nuxt-link to="/" class="logo">Education for Justice</nuxt-link>
 
           <nav>
             <ul>
@@ -34,7 +34,7 @@ html {
   box-sizing: border-box;
 }
 body{
-  background:#ECECEC;
+  // background:#ECECEC;
 }
 *,
 *:before,

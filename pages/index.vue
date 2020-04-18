@@ -60,7 +60,8 @@
       border-radius:1em;
       padding: .8em;
       margin: 1em 0;
-      box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.06);
+      // box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
     }
 
     img{
