@@ -17,6 +17,18 @@
       </div>
     </header>
     <nuxt />
+
+    <footer>
+      <div class="container">
+        <div class="content">
+          <p>
+            <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
+            <br>
+            <strong>&copy; The Covid-19 Survival Guide</strong> by Legacy School Bangalore
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -76,6 +88,20 @@ header{
         font-weight: normal;
         padding: .5em;
       }
+    }
+  }
+}
+
+footer .container{
+  padding: 1.5em 0 1.5em;
+  background:#fafafa;
+  width: 100%;
+
+  .content{
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: #3273DC;
     }
   }
 }
