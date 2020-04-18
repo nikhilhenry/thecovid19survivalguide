@@ -1,7 +1,7 @@
 {
   "name": "thecovidsurvivalguide",
   "version": "1.0.0",
-  "description": "My excellent Nuxt.js project",
+  "description": "A blog for the Covid-19 2020 pandemic",
   "author": "Nikhil Henry",
   "private": true,
   "scripts": {
