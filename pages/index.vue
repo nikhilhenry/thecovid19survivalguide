@@ -86,12 +86,20 @@
       text-transform: uppercase;
       font-size: .8em;
     }
-    
+
     span{
       color: $primary-color;
       text-transform: uppercase;
     }
   }
+
+@media only screen and (min-width: 768px){
+  main li{
+    display:grid;
+    grid-template-columns: 180px auto;
+    grid-column-gap: 1em;
+  }
+}
 </style>
 
 <script>
