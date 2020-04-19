@@ -20,6 +20,21 @@
 
     <footer>
       <div class="container">
+        <div class="columns">
+          <div class="column social">
+            <h2>Follow us on social media</h2>
+            <a href="https://www.instagram.com/legacy_chiaroscuro/"><i class="fab fa-instagram"></i></a>
+            <br>
+            <p class="address"><strong>Address: </strong>6/1A, 6/2 Byrathi Village, Bidarahalli Hobli, Off Hennur-Bagalur Main Road (New, International Airport Link Road), Bengaluru, Karnataka 560077</p>
+          </div>
+          <div class="column contact">
+            <h2>Contact Us</h2>
+            <ul>
+              <li><p>Team:<a href="mailto:teamunodc@lsb.edu.in"> teamunodc@lsb.edu.in</a></p></li>
+              <li><p>UNODC:<a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></p></li>
+            </ul>
+          </div>
+        </div>
         <div class="content">
           <p>
             <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
@@ -92,23 +107,67 @@ header{
   }
 }
 
-footer .container{
-  padding: 1.5em 0 1.5em;
+footer {
+  
   background:#fafafa;
-  width: 100%;
+  .container{
+    padding: 1.5em 0 .5em;
+    width: 90%;
 
-  .content{
-    text-align: center;
+    .column{
+      padding-bottom: 1em;
+      h2{
+        padding-bottom: .4em;
+      }
+    }
+
+    .social{
+       a{
+        font-size: 1.9em;
+      }
+
+      p{
+       padding-top: .4em; 
+      }
+    }
+
+    p{
+      padding-bottom: .4em;
+    }
+
+  
     a{
       text-decoration: none;
       color: #3273DC;
     }
+
+  .content{
+    text-align: center;
+
   }
+}
 }
 
 @media only screen and (min-width: 768px){
   body{
     font-size:18px;
+  }
+
+  .columns{
+    display: flex;
+    justify-content: space-between;
+
+    .column{
+      width:50%;
+    }
+
+    .contact{
+      text-align: right;
+    }
+  }
+
+  .address{
+    max-width: 40%;
   }
   
 }
