@@ -26,7 +26,7 @@
 </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .hero{
     background-color: $primary-color;
     color:white;
