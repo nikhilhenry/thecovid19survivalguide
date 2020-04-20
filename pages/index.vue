@@ -16,7 +16,7 @@
           <img :src="post.feature_image">
           <div class="content">
             <span>{{ post.authors[0].name}}</span>
-            <nuxt-link :to="{ path: post.slug}">{{post.title}}</nuxt-link>
+            <nuxt-link :to="{ path: '/blog/'+post.slug}">{{post.title}}</nuxt-link>
             <p>{{post.excerpt}}</p>
           </div>
         </li>
