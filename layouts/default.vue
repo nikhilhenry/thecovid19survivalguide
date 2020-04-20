@@ -10,7 +10,7 @@
               <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
               <li><nuxt-link to="/game">Game</nuxt-link></li>
               <li><nuxt-link to="/about">About us</nuxt-link></li>
-              <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+              <li><nuxt-link to="/" v-scroll-to="'#footer'">Contact</nuxt-link></li>
             </ul>
           </nav>
         </div>
@@ -18,7 +18,7 @@
     </header>
     <nuxt />
 
-    <footer>
+    <footer id="footer">
       <div class="container">
         <div class="columns">
           <div class="column social">
