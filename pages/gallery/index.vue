@@ -13,7 +13,7 @@
         <li v-for="(post,index) in posts" :key = "index">
           <img :src="post.feature_image">
           <div class="content">
-            <nuxt-link :to="{ path: post.slug}">{{post.title}}</nuxt-link>
+            <nuxt-link :to="{path: '/gallery/'+post.slug}">{{post.title}}</nuxt-link>
             <span>{{ post.authors[0].name}}</span>
           </div>
         </li>
