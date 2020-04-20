@@ -10,7 +10,7 @@
   <div class="container">
     <main>
       <ul>
-        <li v-for="(post,index) in posts" :key = "index">
+        <li v-for="(post,index) in posts" :key = "index" v-on:click="pushToPost(post.slug)">
           <img :src="post.feature_image">
           <div class="content">
             <nuxt-link :to="{path: '/gallery/'+post.slug}">{{post.title}}</nuxt-link>
@@ -49,6 +49,7 @@
       background:white;
       margin: 1em 0;
       box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+      cursor: pointer;
     }
 
     img{
@@ -108,6 +109,13 @@ export default {
   async asyncData () {
     const posts = await getGallery();
     return { posts: posts }
+  },
+  methods:{
+    pushToPost(slug){
+      this.$router.push({
+        path:'/gallery/'+slug
+      })
+    }
   }
 }
 </script>
