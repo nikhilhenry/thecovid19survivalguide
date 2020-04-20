@@ -114,6 +114,11 @@ footer {
     padding: 1.5em 0 .5em;
     width: 90%;
 
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+    }
+
     .column{
       padding-bottom: 1em;
       h2{
