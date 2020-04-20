@@ -51,7 +51,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 html {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Avenir', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
