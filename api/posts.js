@@ -6,17 +6,19 @@ const api = new GhostContentAPI({
   version: "v3"
 });
 
+//getting all posts for home 
 export async function getPosts(){
   return await api.posts
     .browse({
       limit:"all",
+      filter:"tag: - 'Artwork'",
       include:"tags,authors"
     })
     .catch(err=>{
       console.error(err);
     });
 }
-
+//getting single post
 export async function getSinglePost(postSlug) {
   return await api.posts
     .read({
@@ -28,6 +30,20 @@ export async function getSinglePost(postSlug) {
     });
 }
 
+// getting all posts for galley
+export async function getGallery() {
+  return await api.posts
+    .browse({
+      limit: "all",
+      filter:"tag:Artwork",
+      include:"tags,authors",
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+//getting a single page
 export async function getPage(pageSlug ) {
   return await api.pages
     .read({
