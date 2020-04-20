@@ -11,6 +11,7 @@
       </ul>
       <div class="content">
         <div v-html="post.html" class=".text">{{post.html}}</div>
+        <h1 class="author">By {{ post.authors[0].name}}</h1>
       </div>
     </main>
   </div>
@@ -71,10 +72,21 @@ export default {
 
   .content{
     padding-bottom: 3em;
+    .author{
+    font-weight: bold;
+    color: $primary-color;
+    margin: .75em 0 .5em;
+    }
     img{
       width:100%;
     }
   }
 
+}
+
+@media only screen and(min-width: 768px){
+  .container{
+    width: 50%;
+  }
 }
 </style>
