@@ -8,7 +8,7 @@
           <nav>
             <ul>
               <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
-              <li><nuxt-link to="/game">Game</nuxt-link></li>
+              <li><a href="https://www.quiz-maker.com/QUDDOSW">Game</a></li>
               <li><nuxt-link to="/about">About us</nuxt-link></li>
               <li><nuxt-link to="/" v-scroll-to="'#footer'">Contact</nuxt-link></li>
             </ul>
