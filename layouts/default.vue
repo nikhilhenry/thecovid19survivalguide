@@ -48,10 +48,10 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 html {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Avenir','Open Sans', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -59,9 +59,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
-body{
-  // background:#ECECEC;
 }
 *,
 *:before,
