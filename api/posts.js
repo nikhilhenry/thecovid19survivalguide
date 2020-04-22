@@ -1,8 +1,8 @@
 import GhostContentAPI from '@tryghost/content-api';
 
 const api = new GhostContentAPI({
-  url: 'http://ec2-18-130-100-148.eu-west-2.compute.amazonaws.com',
-  key: 'ef89982e83f60ba209f90b97a7',
+  url: 'https://www.nikhilhenry.tech',
+  key: '09f9d3fcd6994f82815a25602d',
   version: "v3"
 });
 
