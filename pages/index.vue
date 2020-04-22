@@ -65,6 +65,10 @@
       cursor: pointer;
     }
 
+    li:hover{
+      box-shadow: 0 2px 3px rgba(31,66,135,.3), 0 0 0 1px rgba(31,66,135,.3);
+    }
+
     img{
       width:100%;
       border-radius: .5em;
