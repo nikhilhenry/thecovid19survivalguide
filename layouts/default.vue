@@ -1,23 +1,7 @@
 <template>
   <div>
-    <header>
-      <div class="container">
-        <div class="navbar">
-          <nuxt-link to="/" class="logo">Education for Justice</nuxt-link>
-
-          <nav>
-            <ul>
-              <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
-              <li><a href="https://www.quiz-maker.com/QUDDOSW">Game</a></li>
-              <li><nuxt-link to="/about">About us</nuxt-link></li>
-              <li><nuxt-link to="/" v-scroll-to="'#footer'">Contact</nuxt-link></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <Navbar/>
     <nuxt />
-
     <footer id="footer">
       <div class="container">
         <div class="columns">
@@ -47,6 +31,16 @@
   </div>
 </template>
 
+<script>
+import Navbar from '~/components/navbar'
+
+export default {
+  components:{
+    Navbar
+  }
+}
+</script>
+
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
@@ -70,38 +64,6 @@ html {
 .container{
   margin: 0 auto;
   width: 90%;
-}
-
-header{
-  background: $primary-color;
-  padding: 1em 0;
-  text-align:center;
-
-  .navbar{
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-  }
-
-  a{
-    color:white;
-    text-decoration:none;
-  }
-
-  nav{
-    display:flex;
-
-    ul{
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-
-      li a{
-        font-weight: normal;
-        padding: .5em;
-      }
-    }
-  }
 }
 
 footer {
