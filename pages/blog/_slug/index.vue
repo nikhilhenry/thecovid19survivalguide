@@ -1,20 +1,25 @@
 <template>
+<div>
   <div class="container">
-    <main>
       <h2 class="date">{{post.date}}</h2>
       <h1 class="title">{{post.title}}</h1>
-      <p class="read_time">{{post.reading_time}} minute read</p>
+      <p class="read_time"><i class="fas fa-hourglass-half"></i> {{post.reading_time}} MIN READ</p>
       <ul class="tags">
         <li v-for="(tag,index) in post.tags" :key="index">
           <span>{{tag.name}}</span>
         </li>
       </ul>
-      <div class="content">
-        <div v-html="post.html" class=".text">{{post.html}}</div>
-        <h1 class="author">By {{ post.authors[0].name}}</h1>
-      </div>
-    </main>
   </div>
+  <figure class="full_image">
+  <img :src="post.feature_image" class="cover_image">
+  </figure>
+  <div class="container">
+    <section class="content">
+        <div v-html="post.html" class="text">{{post.html}}</div>
+        <h1 class="author">By {{ post.authors[0].name}}</h1>
+    </section>
+  </div>
+</div>
 </template>
 
 <script>
@@ -38,7 +43,7 @@ export default {
 
   .date{
     font-weight: 100;
-    color: $primary-color;
+    color: $tag-color;
     margin: .75em 0 .5em;
   }
 
@@ -77,16 +82,35 @@ export default {
     color: $primary-color;
     margin: .75em 0 .5em;
     }
-    img{
-      width:100%;
-    }
   }
 
 }
 
-@media only screen and(min-width: 768px){
+  .cover_image{
+    width:100%;
+    height: auto;
+  }
+
+@media only screen and(min-width:900px){
   .container{
-    width: 50%;
+    width:50%;
+  }
+
+  .cover_image{
+    width:60%!important;
+  }
+}
+
+@media only screen and(min-width: 768px){
+
+  .full_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .cover_image{
+    width:90%;
   }
 }
 </style>
