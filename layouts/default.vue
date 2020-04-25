@@ -61,6 +61,14 @@ html {
   margin: 0;
 }
 
+.kg-image{
+  width:100%;
+}
+
+.text p{
+  margin: 1em 0 1em;
+}
+
 .container{
   margin: 0 auto;
   width: 90%;
