@@ -16,7 +16,7 @@
           <div class="column contact">
             <h2>Contact Us</h2>
             <ul>
-              <li><p>Team:<a href="mailto:teamunodc@lsb.edu.in"> teamunodc@lsb.edu.in</a></p></li>
+              <li><p>Team:<a href="mailto:student.voices@lsb.edu.in"> student.voices@lsb.edu.in</a></p></li>
               <li><p>UNODC:<a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></p></li>
             </ul>
           </div>
@@ -25,7 +25,7 @@
           <p>
             <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
             <br>
-            <strong>&copy; The Covid-19 Survival Guide</strong> by Legacy School Bangalore
+            <strong>&copy; One Legacy</strong> by Legacy School Bangalore
           </p>
         </div>
       </div>
