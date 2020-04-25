@@ -3,72 +3,81 @@
   <Hero v-bind:heroPost="heroPost"/>
   <div class="container">
     <main>
-      <h2>spotlight</h2>
-      <ul>
-        <li v-for="(post,index) in posts" :key = "index" v-on:click="pushToPost(post.slug)">
+      <section class="archive">
+        <article v-for="(post,index) in posts" :key="index">
           <img :src="post.feature_image">
           <div class="content">
-            <span>{{ post.authors[0].name}}</span>
-            <nuxt-link :to="{ path: '/blog/'+post.slug}">{{post.title}}</nuxt-link>
+            <ul class="tags">
+              <li v-for="(tag,index) in post.tags" :key="index">
+                <span class="tag">#{{tag.name}}</span>
+              </li>
+            </ul>
+            <h2 class="title">{{post.title}}</h2>
             <p>{{post.excerpt}}</p>
+            <span class="author">{{post.authors[0].name}}</span>
+            <div class="extra">
+              <span>{{post.date}} <i class="bullet">&#8226;</i> {{post.reading_time}} MIN READ</span>
+            </div>
           </div>
-        </li>
-      </ul>
+          <br>
+        </article>
+      </section>
     </main>
   </div>
 </div>
 </template>
 
 <style lang="scss" scoped>
-
-  .container ul{
-    list-style-type: none;
-    padding:0;
-  }
-
   main{
+    article{
+      margin-top:1em;
+      border-bottom: 1px solid #dfe4e7;
+      img{
+        height: 200px;
+        width:100%;
+        border-radius: .3em;
+        object-fit: cover;
+      }
 
-    li{
-      background:white;
-      border-radius:1em;
-      padding: .8em;
-      margin: 1em 0;
-      // box-shadow: 15px 21px 40px 0px rgba(0,0,0,0.06);
-      box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
-      cursor: pointer;
-    }
+      .content{
+        padding: .5em 0 .5em;
+  
+        ul{
+          list-style-type: none;
+          padding: 0;
+          .tag{
+            color: $tag-color;
+            text-transform: uppercase;
+            margin:0 0 .2em;
+            letter-spacing: .2px;
+            font-size: .8em;
+            font-weight: 400;
+          }
+        }
 
-    li:hover{
-      box-shadow: 0 2px 3px rgba(31,66,135,.3), 0 0 0 1px rgba(31,66,135,.3);
-    }
+        .title{
+          margin:.1em 0 .4em;
+          line-height: 1.15em;
+        }
 
-    img{
-      width:100%;
-      border-radius: .5em;
-    }
+        p{
+          display: block;
+          color:#738a94;
+          margin-bottom:.9em;
+        }
 
-    .content{
-      padding: .5em;
-    }
-
-    a{
-      font-size: 1.5em;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      display: block;
-      margin: -.1em 0 .2em;
-    }
-
-    h2{
-      margin-top:3em;
-      text-transform: uppercase;
-      font-size: .8em;
-    }
-
-    span{
-      color: $title-color;
-      text-transform: uppercase;
+        .author{
+          font-weight: 600;
+          color: #424852;
+        }
+        
+        .extra{
+          span{
+            color:#92a3ab;
+            font-size: .9em;
+          }
+        }
+      }
     }
   }
 
@@ -92,7 +101,12 @@ export default {
   async asyncData () {
     var heroPost = await getFeaturedPost();
     heroPost = heroPost[0]
-    const posts = await getPosts();
+    var f_posts = await getPosts();
+    var posts = [];
+    f_posts.forEach(post => {
+      post.date = new Date(post.published_at).toLocaleString('default', { month: 'short' }).toUpperCase()+' '+new Date(post.published_at).getDate()+' '+new Date(post.published_at).getFullYear();
+      posts.push(post);
+    });
     return { posts: posts,heroPost : heroPost }
   },
   methods:{
