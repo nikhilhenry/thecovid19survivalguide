@@ -4,7 +4,7 @@
   <div class="container">
     <main>
       <section class="archive">
-        <article v-for="(post,index) in posts" :key="index">
+        <article v-for="(post,index) in posts" :key="index" v-on:click="pushToPost(post.slug)">
           <img :src="post.feature_image">
           <div class="content">
             <ul class="tags">
@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
   main{
-    margin-top:3em;
+    margin:3em 0 3em;
   }
   .archive{
     display:grid;
@@ -44,6 +44,7 @@
       flex:1 1 301px;
       flex-direction: column;
       border-bottom: 1px solid #dfe4e7;
+      cursor: pointer;
       img{
         height: 200px;
         width:100%;
