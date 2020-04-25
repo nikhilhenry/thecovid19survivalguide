@@ -30,6 +30,18 @@ export async function getSinglePost(postSlug) {
     });
 }
 
+//getting a featured post
+export async function getFeaturedPost(){
+  return await api.posts
+    .browse({
+      limit:"1",
+      filter:"featured:true"
+    })
+    .catch(err=>{
+      console.log(err);
+    });
+}
+
 // getting all posts for galley
 export async function getGallery() {
   return await api.posts
