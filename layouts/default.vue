@@ -8,6 +8,8 @@
           <div class="column social">
             <h2>Follow us on social media</h2>
             <a href="https://www.instagram.com/legacy_chiaroscuro/"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
             <br>
             <p class="address"><strong>Address: </strong>6/1A, 6/2 Byrathi Village, Bidarahalli Hobli, Off Hennur-Bagalur Main Road (New, International Airport Link Road), Bengaluru, Karnataka 560077</p>
           </div>
@@ -94,8 +96,9 @@ footer {
     }
 
     .social{
-       a{
+      a{
         font-size: 1.9em;
+        margin-right: 1em;
       }
 
       p{
