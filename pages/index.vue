@@ -14,6 +14,7 @@
             </ul>
             <h2 class="title">{{post.title}}</h2>
             <p>{{post.excerpt}}</p>
+            <span class="spacer"></span>
             <span class="author">{{post.authors[0].name}}</span>
             <div class="extra">
               <span>{{post.date}} <i class="bullet">&#8226;</i> {{post.reading_time}} MIN READ</span>
@@ -29,8 +30,19 @@
 
 <style lang="scss" scoped>
   main{
+    margin-top:3em;
+  }
+  .archive{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 2em;
+  }
+
+  main{
     article{
-      margin-top:1em;
+      display: flex;
+      flex:1 1 301px;
+      flex-direction: column;
       border-bottom: 1px solid #dfe4e7;
       img{
         height: 200px;
@@ -65,7 +77,9 @@
           color:#738a94;
           margin-bottom:.9em;
         }
-
+        .spacer{
+          flex: 1 1 auto;
+        }
         .author{
           font-weight: 600;
           color: #424852;
@@ -81,12 +95,22 @@
     }
   }
 
-@media only screen and (min-width: 768px){
-  main li{
+@media only screen and (min-width: 1000px){
+
+  article:nth-child(1){
+    grid-column: 1/-1;
     display:grid;
-    grid-template-columns: 180px auto;
+    grid-template-columns: 500px auto;
     grid-column-gap: 1em;
+    img{
+      height: 100%;
+    }
   }
+  // article{
+  //   img{
+  //     height: 100%;
+  //   }
+  // }
 }
 </style>
 
