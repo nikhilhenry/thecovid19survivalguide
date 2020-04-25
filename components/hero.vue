@@ -22,6 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,6 +59,7 @@ export default {
     a:hover{
       color:#48c774;
       background:transparent;
+      font-weight: bold;
     }
   }
 }
