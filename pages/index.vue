@@ -1,13 +1,6 @@
 <template>
 <div>
-  <div class="hero">
-    <div class="container">
-      <h1>The Covid-19 Survival Guide</h1>
-      <p class="subtitle">Legacy School in collaboration with the UNODC</p>
-      <nuxt-link to="/about" class="learn">Learn more</nuxt-link>
-    </div>
-  </div>
-
+  <Hero v-bind:heroPost="heroPost"/>
   <div class="container">
     <main>
       <h2>spotlight</h2>
@@ -27,26 +20,6 @@
 </template>
 
 <style lang="scss" scoped>
-  .hero{
-    background-color: $primary-color;
-    color:white;
-    text-align: center;
-    padding-top: 2em;
-      
-      h1{
-        margin-bottom: 1em;
-      }
-
-      .learn{
-        background: darken($primary-color,10%);
-        padding: .5em 3em;
-        margin:2em 0 3em;
-        display: inline-block;
-        border-radius:  10px;
-        color: $accent-color;
-        text-decoration: none;
-      }
-  }
 
   .container ul{
     list-style-type: none;
@@ -109,11 +82,18 @@
 </style>
 
 <script>
+import {getFeaturedPost} from '~/api/posts';
 import { getPosts } from '~/api/posts';
+import Hero from '~/components/hero';
 export default {
+  components:{
+    Hero
+  },
   async asyncData () {
+    var heroPost = await getFeaturedPost();
+    heroPost = heroPost[0]
     const posts = await getPosts();
-    return { posts: posts }
+    return { posts: posts,heroPost : heroPost }
   },
   methods:{
     pushToPost(slug){
