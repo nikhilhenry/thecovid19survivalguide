@@ -117,6 +117,10 @@ footer {
     font-size:18px;
   }
 
+  .container{
+    width:80%;
+  }
+
   .columns{
     display: flex;
     justify-content: space-between;
@@ -134,5 +138,11 @@ footer {
     max-width: 40%;
   }
   
+}
+
+@media only screen and (min-width: 900px){
+  .container{
+    width:70%
+  }
 }
 </style>
