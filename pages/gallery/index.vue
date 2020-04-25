@@ -25,10 +25,15 @@
 
 <style lang="scss" scoped>
   .hero{
-    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     color:white;
     text-align: center;
     padding-top: 2em;
+    height: 40vh;
       
       h1{
         margin-bottom: 1em;
@@ -53,7 +58,7 @@
     }
 
     li:hover{
-      box-shadow: 0 2px 3px rgba(31,66,135,.3), 0 0 0 1px rgba(31,66,135,.3);
+      box-shadow: 0 2px 3px rgba(0,0,0,.3), 0 0 0 1px rgba(0,0,0,.3);
     }
 
     img{
