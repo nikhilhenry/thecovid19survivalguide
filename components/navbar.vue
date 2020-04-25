@@ -71,6 +71,10 @@ export default {
         a{
         text-decoration: none;
         color: white;
+        transition: .3s ease-in-out;
+        }
+        a:hover{
+          text-decoration: underline white;
         }
       }
     }
