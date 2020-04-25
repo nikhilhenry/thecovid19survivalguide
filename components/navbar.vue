@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <header class="navigation">
+    <div class="container">
     <nav>
       <div class="toggle" v-on:click="navToggle">
         <div class="line1"></div>
@@ -17,6 +18,7 @@
         <li><nuxt-link to="/about">About us</nuxt-link></li>
       </ul>
     </nav>
+    </div>
     </header>
   </div>
 </template>
@@ -50,7 +52,6 @@ export default {
   nav{
     color: white;
     padding: 1em 0 1em;
-    width:90%;
     margin: 0 auto;
 
     .logo{
