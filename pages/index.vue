@@ -101,10 +101,11 @@
   article:nth-child(1){
     grid-column: 1/-1;
     display:grid;
-    grid-template-columns: 500px auto;
+    grid-template-columns: 50% auto;
     grid-column-gap: 1em;
     img{
-      height: 100%;
+      height:300px;
+      margin:0 0 1em;
     }
   }
   // article{
