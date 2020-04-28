@@ -74,6 +74,8 @@
         }
 
         p{
+          text-align: justify;
+          text-justify: auto;
           display: block;
           color:#738a94;
           margin-bottom:.9em;
