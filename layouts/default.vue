@@ -16,8 +16,10 @@
           <div class="column contact">
             <h2>Contact Us</h2>
             <ul>
-              <li><p>Team:<a href="mailto:student.voices@lsb.edu.in"> student.voices@lsb.edu.in</a></p></li>
-              <li><p>UNODC:<a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></p></li>
+              <h3>TEAM</h3>
+              <li><a href="mailto:student.voices@lsb.edu.in"> student.voices@lsb.edu.in</a></li>
+              <h3>UNODC</h3>
+              <li><a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></li>
             </ul>
           </div>
         </div>
@@ -25,7 +27,7 @@
           <p>
             <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
             <br>
-            <strong>&copy; One Legacy</strong> by Legacy School Bangalore
+            <strong>One Legacy. All rights reserved</strong>
           </p>
         </div>
       </div>
@@ -78,7 +80,7 @@ html {
 
 footer {
   
-  background:#fafafa;
+  background:#eee;
   .container{
     padding: 1.5em 0 .5em;
     width: 90%;
