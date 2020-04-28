@@ -69,8 +69,13 @@ html {
   width:100%;
 }
 
-.text p{
+.text{
+  text-align: justify;
+  text-justify: distribute;
+ p{
   margin: 1em 0 1em;
+  // text-justify: auto;
+  }
 }
 
 .container{

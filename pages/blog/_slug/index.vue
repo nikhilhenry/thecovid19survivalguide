@@ -45,17 +45,20 @@ export default {
     font-weight: 100;
     color: $tag-color;
     margin: .75em 0 .5em;
+    font-size: 1.25em;
   }
 
   .title{
     font-weight: bolder;
     font-size: 3em;
+    line-height: 1;
   }
 
   .read_time{
     font-size: 1.25em;
     color: #333333;
     opacity: .5;
+    margin: .75em 0 .5em;
   }
 
   .tags{
