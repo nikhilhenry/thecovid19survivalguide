@@ -77,6 +77,7 @@
           display: block;
           color:#738a94;
           margin-bottom:.9em;
+          font-size: 1em;
         }
         .spacer{
           flex: 1 1 auto;
@@ -89,7 +90,7 @@
         .extra{
           span{
             color:#92a3ab;
-            font-size: .9em;
+            font-size: .8em;
           }
         }
       }
