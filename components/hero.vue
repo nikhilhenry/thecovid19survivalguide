@@ -1,11 +1,6 @@
 <template>
   <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
     <div class="container">
-      <span class="logos">
-        <img src="../assets/logos/unodc.png" class="unodc">
-        <img src="../assets/logos/lsb.png" class="lsb">
-      </span>
-      <h2>one legacy</h2>
       <h1 class="title">{{heroPost.title}}</h1>
       <nuxt-link :to="{ path: '/blog/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
     </div>
@@ -36,19 +31,6 @@ export default {
   height: 40vh;
   .container{
     align-items: center;
-
-
-    .logos{
-      display: none!important;
-      display: flex;
-      .unodc{
-        height: 3em;
-        margin-right: 1em;;
-      }
-      .lsb{
-        height: 5em;
-      }
-    }
 
     h2{
       padding: 1em 0 1em;
