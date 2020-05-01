@@ -17,7 +17,7 @@
         <div class="line3"></div>
       </div>
       <div class="logo">
-        <h4>one legacy</h4>
+        <h4><nuxt-link to="/">one legacy</nuxt-link></h4>
       </div>
       <ul class="nav-links" v-bind:class="{'is-active':isActive}">
         <li><nuxt-link to="/">Home</nuxt-link></li>
@@ -89,6 +89,10 @@ export default {
       letter-spacing: 5px;
       font-weight: bold;
       font-size: 1.2em;
+      a{
+        text-decoration: none;
+        color:white;
+      }
     }
 
     ul{
