@@ -14,7 +14,8 @@
   "dependencies": {
     "@tryghost/content-api": "^1.4.1",
     "nuxt": "^2.0.0",
-    "vue-scrollto": "^2.18.1"
+    "vue-scrollto": "^2.18.1",
+    "@nuxtjs/style-resources": "^1.0.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
