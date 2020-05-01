@@ -1,6 +1,14 @@
 <template>
   <div class="app">
     <header class="navigation">
+    <section class="logo-section">
+      <div class="container">
+      <span class="logos">
+        <a href="https://www.unodc.org/"><img src="../assets/logos/unodc.png" class="unodc"></a>
+        <a href="https://www.lsb.edu.in/"><img src="../assets/logos/lsb.png" class="lsb"></a>
+      </span>
+      </div>
+    </section>
     <div class="container">
     <nav>
       <div class="toggle" v-on:click="navToggle">
@@ -48,6 +56,28 @@ export default {
 
   header{
     background-color: black;
+  }
+  .logo-section{
+    display: none;
+    background-color: white;
+    .logos{
+      display: flex;
+      justify-content: space-between;
+      padding:.5em 0 .5em;
+      align-items: center;
+
+      a{
+        margin:0;
+        padding:0;
+      }
+
+      .unodc{
+        height: 3em;
+      }
+      .lsb{
+        height: 4em;
+      }
+    }
   }
   nav{
     color: white;
@@ -100,6 +130,11 @@ export default {
 
   //desktop
 @media screen and (min-width: 768px) {
+
+  .logo-section{
+    display:block;
+  }
+
   nav{
     display: flex;
     justify-content: space-between;
