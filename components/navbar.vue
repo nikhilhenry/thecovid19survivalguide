@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <header class="navigation">
-    <section class="logo-section">
+    <section class="logo-section " v-bind:class="{'is-off':isOff}">
+      <i class="fas fa-times-circle" v-on:click="logoToggle"></i>
       <div class="container">
       <span class="logos">
         <a href="https://www.unodc.org/"><img src="../assets/logos/unodc.png" class="unodc"></a>
@@ -36,12 +37,16 @@ export default {
   name:'Navbar',
   data(){
     return{
-      isActive:false
+      isActive:false,
+      isOff:false
     }
   },
   methods:{
     navToggle:function(){
       this.isActive=!this.isActive;
+    },
+    logoToggle:function(){
+      this.isOff=!this.isOff;
     }
   }
 }
@@ -60,6 +65,16 @@ export default {
   .logo-section{
     display: none;
     background-color: white;
+    .fa-times-circle{
+      margin:.5em;
+      position: absolute;
+      top:0;
+      right:0;
+      color:rgb(216, 216, 216)
+    }
+    .fa-times-circle:hover{
+      color:rgb(179, 179, 179)
+    }
     .logos{
       display: flex;
       justify-content: space-between;
@@ -137,6 +152,10 @@ export default {
 
   .logo-section{
     display:block;
+  }
+
+  .is-off{
+    display: none;
   }
 
   nav{
