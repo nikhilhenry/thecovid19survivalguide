@@ -7,10 +7,11 @@ const api = new GhostContentAPI({
 });
 
 //getting all posts for home 
-export async function getPosts(){
+export async function getPosts(page){
   return await api.posts
     .browse({
-      limit:"all",
+      limit:"7",
+      page:page,
       filter:"tag: - 'Artwork'",
       include:"tags,authors"
     })
