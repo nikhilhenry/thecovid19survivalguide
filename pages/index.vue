@@ -24,6 +24,9 @@
         </article>
       </section>
     </main>
+    <section class="button">
+      <button class="loadmore" v-on:click="loadMore">load more</button>
+    </section>
   </div>
 </div>
 </template>
@@ -99,6 +102,25 @@
     }
   }
 
+  .button{
+    text-align: center;
+    margin: 5em 0 5em;
+    .loadmore{
+      font-size: 1em;
+      text-transform: uppercase;
+      background:none;
+      border: solid 2px rgba($title-color, $alpha: .5);
+      border-radius: 5px;
+      color: rgba($title-color, $alpha: .5);
+      opacity: .8;
+      padding:.2em 1em .2em;
+    }
+    .loadmore:hover{
+      background-color: $title-color;
+      color:white;
+    }
+  }
+
 @media only screen and (min-width: 1000px){
 
   article:nth-child(1){
@@ -127,15 +149,22 @@ export default {
   components:{
     Hero
   },
+  data(){
+    return{
+      pageNum:1,
+      posts:[]
+    }
+  },
   async asyncData () {
     var heroPost = await getFeaturedPost();
     heroPost = heroPost[0]
-    var f_posts = await getPosts();
+    var f_posts = await getPosts(1);
     var posts = [];
     f_posts.forEach(post => {
       post.date = new Date(post.published_at).toLocaleString('default', { month: 'short' }).toUpperCase()+' '+new Date(post.published_at).getDate()+' '+new Date(post.published_at).getFullYear();
       posts.push(post);
     });
+    // console.log(posts)
     return { posts: posts,heroPost : heroPost }
   },
   methods:{
@@ -143,7 +172,18 @@ export default {
       this.$router.push({
         path:'/blog/'+slug
       })
-    }
+    },
+  async loadMore(){
+    this.pageNum+=1;
+    var f_posts = await getPosts(this.pageNum); 
+    var new_posts = []
+    f_posts.forEach(post => {
+      post.date = new Date(post.published_at).toLocaleString('default', { month: 'short' }).toUpperCase()+' '+new Date(post.published_at).getDate()+' '+new Date(post.published_at).getFullYear();
+      new_posts.push(post);
+    });
+    this.posts = this.posts.concat(new_posts)
+    console.log(this.posts)
+  },
   }
 }
 </script>
