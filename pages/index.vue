@@ -114,9 +114,10 @@
       color: rgba($title-color, $alpha: .5);
       opacity: .8;
       padding:.2em 1em .2em;
+      transition: background .2s ease-in;
     }
     .loadmore:hover{
-      background-color: $title-color;
+      background: $title-color;
       color:white;
     }
   }
