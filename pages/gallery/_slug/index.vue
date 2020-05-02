@@ -43,6 +43,7 @@ export default {
   }
 
   img{
+    margin-top:2em;
     width:100%;
   }
 
