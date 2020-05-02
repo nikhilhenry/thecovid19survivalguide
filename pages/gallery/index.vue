@@ -90,7 +90,6 @@
 
     span{
       color: $title-color;
-      text-transform: uppercase;
     }
   }
 

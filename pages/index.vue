@@ -33,7 +33,7 @@
 
 <style lang="scss" scoped>
   main{
-    margin:3em 0 3em;
+    margin:3em 0 1em;
   }
   .archive{
     display:grid;
@@ -104,7 +104,7 @@
 
   .button{
     text-align: center;
-    margin: 5em 0 5em;
+    margin: 0 0 5em;
     .loadmore{
       font-size: 1em;
       text-transform: uppercase;
