@@ -5,8 +5,9 @@
       <i class="fas fa-times-circle" v-on:click="logoToggle"></i>
       <div class="container">
       <span class="logos">
+       <a href="https://www.lsb.edu.in/"><img src="../assets/logos/lsb.png" class="lsb"></a>
+
         <a href="https://www.unodc.org/"><img src="../assets/logos/unodc.png" class="unodc"></a>
-        <a href="https://www.lsb.edu.in/"><img src="../assets/logos/lsb.png" class="lsb"></a>
       </span>
       </div>
     </section>
@@ -24,7 +25,7 @@
         <li><nuxt-link to="/">Home</nuxt-link></li>
         <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
         <li><a href="https://www.quiz-maker.com/QUDDOSW">Game</a></li>
-        <li><nuxt-link to="/about">About us</nuxt-link></li>
+        <li><nuxt-link to="/about">About Us</nuxt-link></li>
       </ul>
     </nav>
     </div>
