@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Hero v-bind:heroPost="heroPost"/>
+  <Hero v-bind:heroPosts="heroPosts"/>
   <div class="container">
     <main>
       <section class="archive">
@@ -157,8 +157,7 @@ export default {
     }
   },
   async asyncData () {
-    var heroPost = await getFeaturedPost();
-    heroPost = heroPost[0]
+    var heroPosts = await getFeaturedPost();
     var f_posts = await getPosts(1);
     var posts = [];
     f_posts.forEach(post => {
@@ -166,7 +165,7 @@ export default {
       posts.push(post);
     });
     // console.log(posts)
-    return { posts: posts,heroPost : heroPost }
+    return { posts: posts,heroPosts : heroPosts }
   },
   methods:{
     pushToPost(slug){

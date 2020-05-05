@@ -1,21 +1,21 @@
 <template>
   <hooper :settings="hooperSettings">
-    <slide>
+    <slide v-for="(heroPost,index) in heroPosts" :key="index">
+      <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
+        <div class="container">
+          <h1 class="title">{{heroPost.title}}</h1>
+          <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">{{heroPost.excerpt}} <i class="fas fa-arrow-right"></i></nuxt-link>
+        </div>
+      </div>
+    </slide>
+    <!-- <slide>
       <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
         <div class="container">
           <h1 class="title">{{heroPost.title}}</h1>
           <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
         </div>
       </div>
-    </slide>
-    <slide>
-      <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
-        <div class="container">
-          <h1 class="title">{{heroPost.title}}</h1>
-          <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
-        </div>
-      </div>
-    </slide>
+    </slide> -->
   <hooper-navigation slot="hooper-addons"></hooper-navigation>
   <hooper-pagination slot="hooper-addons"></hooper-pagination>
   </hooper>
@@ -47,7 +47,7 @@ export default {
     }
   },
   props:{
-    heroPost:Object
+    heroPosts:Array
   }
 
 }
