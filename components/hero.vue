@@ -48,8 +48,7 @@ export default {
 <style lang="scss" scoped>
 
 .hooper{
-  height: 50vh;
-  margin:0;
+  height: 40vh;
 }
 
 .hero{
@@ -61,7 +60,7 @@ export default {
   background-size: cover;
   position: relative;
   color:white;
-  height: 45vh;
+  height: 40vh;
   .container{
     align-items: center;
 
@@ -100,5 +99,8 @@ export default {
   .hero{
     height: 45vh;
   }
+  .hooper{
+  height: 45vh;
+}
 }
 </style>
