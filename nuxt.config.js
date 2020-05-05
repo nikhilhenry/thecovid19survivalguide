@@ -46,7 +46,8 @@ export default {
   ],
   styleResources: {
     scss: [
-      '~assets/scss/_colors.scss'
+      '~assets/scss/_colors.scss',
+      '~hooper/dist/hooper.css'
     ]
   },
   /*
