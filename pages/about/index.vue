@@ -21,11 +21,11 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-  margin-top:2em;
 
   .title{
     font-weight: bolder;
     font-size: 3em;
+    margin-top:1em;
   }
 
   .read_time{
@@ -35,7 +35,13 @@ export default {
   }
 
   .content{
-    padding: 2em 0 3em;
+    padding: 1em 0 3em;
+
+    /deep/ p{
+      margin-bottom:1em;
+      text-justify: auto;
+      text-align: justify;
+    }
   }
 
 }
