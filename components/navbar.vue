@@ -6,8 +6,8 @@
       <div class="container">
       <span class="logos">
        <a href="https://www.lsb.edu.in/"><img src="../assets/logos/lsb.png" class="lsb"></a>
-
-        <a href="https://www.unodc.org/"><img src="../assets/logos/unodc.png" class="unodc"></a>
+        <strong>In support of</strong>
+        <a href="https://www.unodc.org/"><img src="../assets/logos/e4j.jpg" class="unodc"></a>
       </span>
       </div>
     </section>
