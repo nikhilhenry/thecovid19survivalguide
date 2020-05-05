@@ -9,9 +9,15 @@
       </div>
     </slide>
     <slide>
-      <h1>Hi</h1>
+      <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
+        <div class="container">
+          <h1 class="title">{{heroPost.title}}</h1>
+          <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
+        </div>
+      </div>
     </slide>
   <hooper-navigation slot="hooper-addons"></hooper-navigation>
+  <hooper-pagination slot="hooper-addons"></hooper-pagination>
   </hooper>
 </template>
 
@@ -21,14 +27,16 @@ import 'hooper/dist/hooper.css'
 import {
   Hooper,
   Slide,
-  Navigation as HooperNavigation
+  Navigation as HooperNavigation,
+  Pagination as HooperPagination
   } from 'hooper';
 export default {
   name:'Hero',
   components:{
     Hooper,
     Slide,
-    HooperNavigation
+    HooperNavigation,
+    HooperPagination
   },
   data(){
     return{
@@ -49,6 +57,13 @@ export default {
 
 .hooper{
   height: 40vh;
+}
+
+ /deep/ svg.icon.icon-arrowRight{
+  fill:white!important;
+}
+ /deep/ svg.icon.icon-arrowLeft{
+  fill:white!important;
 }
 
 .hero{
