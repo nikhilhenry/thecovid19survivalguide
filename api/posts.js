@@ -12,7 +12,7 @@ export async function getPosts(page){
     .browse({
       limit:"7",
       page:page,
-      filter:"tag: - 'Artwork'",
+      filter:"tag: - 'Artwork'+tag: - 'hero'",
       include:"tags,authors"
     })
     .catch(err=>{
