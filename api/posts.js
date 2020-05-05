@@ -35,8 +35,9 @@ export async function getSinglePost(postSlug) {
 export async function getFeaturedPost(){
   return await api.posts
     .browse({
-      limit:"1",
-      filter:"featured:true"
+      limit:"5",
+      filter:"featured:true",
+      order:"published_at ASCD"
     })
     .catch(err=>{
       console.log(err);
