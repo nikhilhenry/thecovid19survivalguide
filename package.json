@@ -9,13 +9,14 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild":"nuxt build"
+    "heroku-postbuild": "nuxt build"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "@tryghost/content-api": "^1.4.1",
+    "hooper": "^0.3.4",
     "nuxt": "^2.0.0",
-    "vue-scrollto": "^2.18.1",
-    "@nuxtjs/style-resources": "^1.0.0"
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",

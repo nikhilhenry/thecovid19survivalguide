@@ -1,16 +1,43 @@
 <template>
-  <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
-    <div class="container">
-      <h1 class="title">{{heroPost.title}}</h1>
-      <nuxt-link :to="{ path: '/blog/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
-    </div>
-  </div>
+  <hooper :settings="hooperSettings">
+    <slide>
+      <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
+        <div class="container">
+          <h1 class="title">{{heroPost.title}}</h1>
+          <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">learn more <i class="fas fa-arrow-right"></i></nuxt-link>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <h1>Hi</h1>
+    </slide>
+  <hooper-navigation slot="hooper-addons"></hooper-navigation>
+  </hooper>
 </template>
 
 <script>
 import {getSinglePost} from '~/api/posts'
+import 'hooper/dist/hooper.css'
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation
+  } from 'hooper';
 export default {
   name:'Hero',
+  components:{
+    Hooper,
+    Slide,
+    HooperNavigation
+  },
+  data(){
+    return{
+      hooperSettings:{
+        centerMode: true,
+        pagination: "no"
+      }
+    }
+  },
   props:{
     heroPost:Object
   }
@@ -19,6 +46,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.hooper{
+  height: 50vh;
+  margin:0;
+}
+
 .hero{
     display: flex;
     align-items: center;
@@ -28,7 +61,7 @@ export default {
   background-size: cover;
   position: relative;
   color:white;
-  height: 40vh;
+  height: 45vh;
   .container{
     align-items: center;
 
