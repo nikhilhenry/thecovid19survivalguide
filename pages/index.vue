@@ -130,7 +130,7 @@
 
 @media only screen and (min-width: 1000px){
 
-  article:nth-child(1){
+  article:nth-child(7n -6){
     grid-column: 1/-1;
     display:grid;
     grid-template-columns: 50% auto;
