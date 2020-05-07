@@ -16,13 +16,11 @@
             <h2 class="title">{{post.title}}</h2>
             <p>{{post.excerpt}}</p>
             </div>
-            <!-- <span class="spacer"></span> -->
             <span class="author">{{post.authors[0].name}}</span>
             <div class="extra">
               <span>{{post.date}} <i class="bullet">&#8226;</i> {{post.reading_time}} MIN READ</span>
             </div>
           </div>
-          <br>
         </article>
       </section>
     </main>
@@ -59,6 +57,7 @@
 
       .content{
         padding: .5em 0 .5em;
+        margin-bottom: .5em;
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
@@ -90,15 +89,13 @@
           text-justify: auto;
           display: block;
           color:#738a94;
-          margin-bottom:.9em;
-          font-size: 1em;
-        }
-        .spacer{
-          flex: 1 1 auto;
+          margin-bottom:2em;
+          font-size: .9em;
         }
         .author{
           font-weight: 600;
           color: #424852;
+          font-size: .9em;
         }
         
         .extra{
