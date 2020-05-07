@@ -7,6 +7,7 @@
         <article v-for="(post,index) in posts" :key="index" v-on:click="pushToPost(post.slug)">
           <img :src="post.feature_image">
           <div class="content">
+            <div class="stuff">
             <ul class="tags">
               <li v-for="(tag,index) in post.tags" :key="index">
                 <span class="tag">#{{tag.name}}</span>
@@ -14,7 +15,8 @@
             </ul>
             <h2 class="title">{{post.title}}</h2>
             <p>{{post.excerpt}}</p>
-            <span class="spacer"></span>
+            </div>
+            <!-- <span class="spacer"></span> -->
             <span class="author">{{post.authors[0].name}}</span>
             <div class="extra">
               <span>{{post.date}} <i class="bullet">&#8226;</i> {{post.reading_time}} MIN READ</span>
@@ -57,6 +59,13 @@
 
       .content{
         padding: .5em 0 .5em;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        .stuff{
+          flex:1 1 auto;
+        }
   
         ul{
           list-style-type: none;
