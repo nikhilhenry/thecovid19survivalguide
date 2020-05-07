@@ -18,9 +18,11 @@
             <ul>
               <h3>TEAM</h3>
               <li><a href="mailto:student.voices@lsb.edu.in"> student.voices@lsb.edu.in</a></li>
-              <h3>UNODC</h3>
-              <li><a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></li>
+              <!-- <h3>UNODC</h3>
+              <li><a href="mailto:educationforjustice@unodc.org"> educationforjustice@unodc.org</a></li> -->
             </ul>
+            <h2>Disclaimer</h2>
+            <p>This website features creative content produced and submitted by students. The views and opinions expressed on this website, and the responsibility of ensuring their originality, are those of the authors. Content on this website does not necessarily reflect the official policy or position of The Legacy School or UNODC. UNODC and The Legacy School do not take any responsibility for any copyright claims or any other disputes that may arise due to any item placed on this website</p>
           </div>
         </div>
         <div class="content">
@@ -121,6 +123,15 @@ footer {
     a{
       text-decoration: none;
       color: #3273DC;
+    }
+
+    .contact{
+      ul{
+        margin-bottom: 1.5em;
+      }
+      p{
+        font-size: .8em;
+      }
     }
 
   .content{
