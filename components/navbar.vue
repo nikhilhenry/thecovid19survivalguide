@@ -6,8 +6,10 @@
       <div class="container">
       <span class="logos">
        <a href="https://www.lsb.edu.in/"><img src="../assets/logos/lsb.png" class="lsb"></a>
-        <strong>In support of</strong>
+       <div class="un-wrapper">
+        <span>In support of</span>
         <a href="https://www.unodc.org/"><img src="../assets/logos/e4j.jpg" class="unodc"></a>
+        </div>
       </span>
       </div>
     </section>
@@ -87,11 +89,22 @@ export default {
         padding:0;
       }
 
+      .un-wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span{
+          font-weight: 200;
+          letter-spacing: .15em;
+        }
+        
+      }
+
       .unodc{
         height: 3em;
       }
       .lsb{
-        height: 4em;
+        height: 4.5em;
       }
     }
   }
