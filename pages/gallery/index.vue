@@ -70,16 +70,17 @@
     .content{
       padding: .5em;
       text-align: center;
+      margin-bottom: 1em;
     }
 
     a{
       text-transform: uppercase;
-      font-size: 2em;
+      font-size: 1.5em;
       text-decoration: none;
       color: black;
       font-weight: bold;
       display: block;
-      margin: -.1em 0;
+      margin: .1em 0;
     }
 
     h2{
@@ -108,6 +109,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+
+  .container ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em;
   }
 }
 

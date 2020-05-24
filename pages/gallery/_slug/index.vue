@@ -5,7 +5,7 @@
       <h2 class="date">{{post.date}}</h2>
       <h1 class="title">{{post.title}}</h1>
       <div class="content">
-        <div v-html="post.html" class=".text">{{post.html}}</div>
+        <div v-html="post.html" class="text">{{post.html}}</div>
         <h1 class="author">By {{ post.authors[0].name}}</h1>
       </div>
     </main>
@@ -47,10 +47,12 @@ export default {
     width:100%;
   }
 
+
   .content{
     padding-bottom: 3em;
     .author{
     font-weight: bold;
+    font-size: 1.5em;
     color: $primary-color;
     margin: .75em 0 .5em;
     }
