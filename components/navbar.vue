@@ -21,7 +21,7 @@
         <div class="line3"></div>
       </div>
       <div class="logo">
-        <h4><nuxt-link to="/">one legacy</nuxt-link></h4>
+        <h4><nuxt-link to="/">una voca</nuxt-link></h4>
       </div>
       <ul class="nav-links" v-bind:class="{'is-active':isActive}">
         <li><nuxt-link to="/">Home</nuxt-link></li>
