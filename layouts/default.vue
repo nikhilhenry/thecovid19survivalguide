@@ -29,7 +29,7 @@
           <p>
             <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
             <br>
-            <strong>One Legacy. All rights reserved</strong>
+            <strong>Una Voca. All rights reserved</strong>
           </p>
         </div>
       </div>
