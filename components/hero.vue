@@ -4,6 +4,7 @@
       <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
         <div class="container">
           <h1 class="title">{{heroPost.title}}</h1>
+          <p class="excerpt">{{heroPost.meta_description}}</p>
           <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">{{heroPost.excerpt}} <i class="fas fa-arrow-right"></i></nuxt-link>
         </div>
       </div>
@@ -85,9 +86,17 @@ export default {
     }
 
     h1{
-      padding: 0 0 .5em;
+      // padding: 0 0 .5em;
       font-size:3em;
       font-weight: bold!important;
+      margin:0
+    }
+
+    .excerpt{
+      font-size: 1.2em;
+      padding: 0 0 2em;
+      margin-bottom: 1em;
+      font-weight: 500;
     }
 
     a{
