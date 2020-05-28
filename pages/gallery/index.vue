@@ -2,7 +2,7 @@
 <div>
   <div class="hero">
     <div class="container">
-      <h1>Evocative Artworks</h1>
+      <h1>Expression Through Media</h1>
       <p class="subtitle">To bring in some light during these troubling times</p>
     </div>
   </div>
@@ -14,7 +14,7 @@
           <img :src="post.feature_image">
           <div class="content">
             <nuxt-link :to="{path: '/gallery/'+post.slug}">{{post.title}}</nuxt-link>
-            <span>{{ post.authors[0].name}}</span>
+            <span v-for="author in post.authors" :key="author.index">{{ author.name}}</span>
           </div>
         </li>
       </ul>
@@ -91,6 +91,7 @@
 
     span{
       color: $title-color;
+      padding:0 .5em;
     }
   }
 

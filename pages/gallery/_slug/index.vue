@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <main>
-            <img :src="post.feature_image">
+      <img :src="post.feature_image">
       <h2 class="date">{{post.date}}</h2>
       <h1 class="title">{{post.title}}</h1>
       <div class="content">
         <div v-html="post.html" class="text">{{post.html}}</div>
-        <h1 class="author">By {{ post.authors[0].name}}</h1>
+        <span class="author">By </span><span class="author name" v-for="author in post.authors" :key="author.index">{{author.name}}</span>
       </div>
     </main>
   </div>
@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .container{
   margin-top:1em;
 
@@ -55,6 +56,10 @@ export default {
     font-size: 1.5em;
     color: $primary-color;
     margin: .75em 0 .5em;
+    }
+
+    .name{
+      padding:0 .5em;
     }
   }
 
