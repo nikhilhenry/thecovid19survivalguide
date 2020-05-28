@@ -25,7 +25,7 @@
       </div>
       <ul class="nav-links" v-bind:class="{'is-active':isActive}">
         <li><nuxt-link to="/">Home</nuxt-link></li>
-        <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
+        <li><nuxt-link to="/gallery">Arts</nuxt-link></li>
         <li><a href="https://www.quiz-maker.com/QUDDOSW">Game</a></li>
         <li><nuxt-link to="/about">About Us</nuxt-link></li>
       </ul>
