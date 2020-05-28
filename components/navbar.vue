@@ -117,7 +117,7 @@ export default {
       text-transform: uppercase;
       letter-spacing: 5px;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.4em;
       a{
         text-decoration: none;
         color:white;
@@ -130,7 +130,7 @@ export default {
       li{
         text-align: center;
         margin: .8em auto;
-        font-size: .8em;
+        font-size: 1em;
         a{
         text-decoration: none;
         color: white;
