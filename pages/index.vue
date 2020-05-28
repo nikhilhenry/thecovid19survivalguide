@@ -81,7 +81,7 @@
 
         .title{
           margin:.1em 0 .4em;
-          line-height: 1.15em;
+          line-height: 1.2em;
         }
 
         p{
