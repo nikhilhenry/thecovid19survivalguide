@@ -129,7 +129,7 @@ export default {
       list-style-type: none;
       li{
         text-align: center;
-        margin: .8em auto;
+        margin: .8em .3em;
         font-size: 1em;
         a{
         text-decoration: none;
@@ -184,7 +184,8 @@ export default {
     .nav-links{
       display:flex;
       justify-content: space-around;
-      width: 30%;
+      min-width: 30%;
+      max-width: 50%;
     }
   }
 }
