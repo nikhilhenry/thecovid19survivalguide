@@ -1,7 +1,7 @@
 import GhostContentAPI from '@tryghost/content-api';
 
 const api = new GhostContentAPI({
-  url: 'https://www.nikhilhenry.tech',
+  url: 'https://unavocaghost.lsb.edu.in',
   key: '09f9d3fcd6994f82815a25602d',
   version: "v3"
 });
