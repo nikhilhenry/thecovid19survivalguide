@@ -54,13 +54,24 @@ export default {
 
 }
 
+.video{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: 2em;
+}
+
+.video iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media only screen and(min-width: 768px){
   .container{
     width: 50%;
-
-      .video iframe{
-    min-height: 500px;
-}
   }
 }
 </style>
