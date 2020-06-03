@@ -156,7 +156,7 @@ footer {
   }
 
   .container{
-    width:80%;
+    width:85%;
   }
 
   .columns{
