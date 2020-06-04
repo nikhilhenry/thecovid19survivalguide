@@ -6,7 +6,7 @@
       <iframe width="100%" height="" src="https://www.youtube.com/embed/H4ijjt-Nh9I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="content">
-        <div v-html="page.html" class=".text">{{page.html}}</div>
+        <div v-html="page.html" class="text">{{page.html}}</div>
       </div>
     </main>
   </div>
@@ -48,7 +48,7 @@ export default {
     /deep/ p{
       margin-bottom:1em;
       text-justify: auto;
-      text-align: left;
+      text-align: justify;
     }
   }
 
