@@ -26,7 +26,7 @@
         </div>
         <div class="content">
           <p>
-            <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry</a>
+            <strong>Built by</strong> <a href="https://nikhilhenry.github.io">Nikhil Henry, Grade 11</a>
             <br>
             <strong>Una Voca. All rights reserved</strong>
           </p>
