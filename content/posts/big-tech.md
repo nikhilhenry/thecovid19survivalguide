@@ -3,9 +3,7 @@ title: BIG TECH AND COVID-19
 author: Nikhil Henry
 date: JUN 8 2020
 feature_image: https://web.archive.org/web/20210522201910im_/https://unavocaghost.lsb.edu.in/content/images/2020/06/fabio-oyXis2kALVg-unsplash.jpg
-slug: hello/world
 ---
-BIG TECH AND COVID-19	
 
 As the vastly growing global pandemic continues to reshape our societies and lifestyles, the industry powering the 21 century is also undergoing a shift in paradigm. Today, Big Tech faces a startling opportunity to both recorrect its wrongs and a pave new ways for positive collaboration and supplement society.
 
