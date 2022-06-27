@@ -4,23 +4,27 @@
     <div class="container">
       <main>
         <section class="archive">
-          <article
+          <nuxt-link
             v-for="(post, index) in posts"
             :key="index"
-            v-on:click="pushToPost(post.slug)"
+            :to="{ path: '/blog/' + post.slug }"
           >
-            <img :src="post.feature_image" />
-            <div class="content">
-              <div class="stuff">
-                <h2 class="title">{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
+            <article>
+              <img :src="post.feature_image" />
+              <div class="content">
+                <div class="stuff">
+                  <h2 class="title">{{ post.title }}</h2>
+                  <p>
+                    <nuxt-content :document="{ body: post.excerpt }" />
+                  </p>
+                </div>
+                <span class="author">{{ post.author }}</span>
+                <div class="extra">
+                  <span>{{ post.date }} <i class="bullet">&#8226;</i> </span>
+                </div>
               </div>
-              <span class="author">{{ post.author }}</span>
-              <div class="extra">
-                <span>{{ post.date }} <i class="bullet">&#8226;</i> </span>
-              </div>
-            </div>
-          </article>
+            </article>
+          </nuxt-link>
         </section>
       </main>
       <section class="button">
@@ -38,6 +42,11 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 main {
