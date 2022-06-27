@@ -27,9 +27,6 @@
           </nuxt-link>
         </section>
       </main>
-      <section class="button">
-        <button class="loadmore" v-on:click="loadMore">load more</button>
-      </section>
     </div>
   </div>
 </template>
@@ -174,31 +171,6 @@ export default {
     const posts = await $content("posts").fetch();
     // console.log(posts)
     return { posts: posts, heroPosts: heroPosts };
-  },
-  methods: {
-    pushToPost(slug) {
-      this.$router.push({
-        path: "/blog/" + slug,
-      });
-    },
-    async loadMore() {
-      this.pageNum += 1;
-      var f_posts = await getPosts(this.pageNum);
-      var new_posts = [];
-      f_posts.forEach((post) => {
-        post.date =
-          new Date(post.published_at)
-            .toLocaleString("default", { month: "short" })
-            .toUpperCase() +
-          " " +
-          new Date(post.published_at).getDate() +
-          " " +
-          new Date(post.published_at).getFullYear();
-        new_posts.push(post);
-      });
-      this.posts = this.posts.concat(new_posts);
-      console.log(this.posts);
-    },
   },
 };
 </script>
