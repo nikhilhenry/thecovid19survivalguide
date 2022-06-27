@@ -2,9 +2,6 @@
   <div>
     <div class="container">
       <h1 class="title">{{ post.title }}</h1>
-      <p class="read_time">
-        <i class="fas fa-hourglass-half"></i> {{ post.reading_time }} MIN READ
-      </p>
     </div>
     <figure class="full_image">
       <img :src="post.feature_image" class="cover_image" />
