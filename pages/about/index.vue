@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <main>
-      <h1 class="title">{{ page.title }}</h1>
+      <h1 class="title">About us</h1>
       <div class="video">
         <iframe
           width="100%"
@@ -13,7 +13,7 @@
         ></iframe>
       </div>
       <div class="content">
-        <div v-html="page.html" class="text">{{ page.html }}</div>
+        <nuxt-content :document="post" class="text" />
       </div>
     </main>
   </div>
@@ -22,9 +22,9 @@
 <script>
 import { getPage } from "~/api/posts";
 export default {
-  async asyncData() {
-    const page = await getPage("about-us");
-    return { page: page };
+  async asyncData({ $content, params }) {
+    const post = await $content("about").fetch();
+    return { post: post };
   },
 };
 </script>
