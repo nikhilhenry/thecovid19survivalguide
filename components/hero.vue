@@ -11,7 +11,7 @@
           <h1 class="title">{{ heroPost.title }}</h1>
           <p class="excerpt">{{ heroPost.meta_description }}</p>
           <nuxt-link :to="{ path: '/featured/' + heroPost.slug }"
-            >{{ heroPost.excerpt }} <i class="fas fa-arrow-right"></i
+            >{{ heroPost.subtitle }} <i class="fas fa-arrow-right"></i
           ></nuxt-link>
         </div>
       </div>

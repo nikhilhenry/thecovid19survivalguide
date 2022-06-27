@@ -1,8 +1,7 @@
 ---
   title: Mission Statement
   meta_description: Hear the voices of tomorrow, today...
-  excerpt: Learn more
-  slug: /featured/mission-statemen
+  subtitle: Learn more
   feature_image: https://web.archive.org/web/20210522201907/https://unavocaghost.lsb.edu.in/content/images/2020/05/IMG_0382.jpeg
 ---
 
