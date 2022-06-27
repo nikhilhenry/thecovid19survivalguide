@@ -20,7 +20,7 @@
                 </div>
                 <span class="author">{{ post.author }}</span>
                 <div class="extra">
-                  <span>{{ post.date }} <i class="bullet">&#8226;</i> </span>
+                  <span>{{ post.date }}</span>
                 </div>
               </div>
             </article>
@@ -44,6 +44,7 @@ main {
 a {
   text-decoration: none;
   color: black;
+  display: flex;
 }
 
 main {
@@ -168,7 +169,7 @@ export default {
   },
   async asyncData({ $content }) {
     const heroPosts = await $content("hero").sortBy("title", "desc").fetch();
-    const posts = await $content("posts").fetch();
+    const posts = await $content("posts").sortBy("date", "asc").fetch();
     // console.log(posts)
     return { posts: posts, heroPosts: heroPosts };
   },
