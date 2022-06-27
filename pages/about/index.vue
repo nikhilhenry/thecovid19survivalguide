@@ -1,67 +1,72 @@
 <template>
   <div class="container">
     <main>
-      <h1 class="title">{{page.title}}</h1>
+      <h1 class="title">{{ page.title }}</h1>
       <div class="video">
-      <iframe width="100%" height="" src="https://www.youtube.com/embed/H4ijjt-Nh9I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe
+          width="100%"
+          height=""
+          src="https://www.youtube.com/embed/H4ijjt-Nh9I"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="content">
-        <div v-html="page.html" class="text">{{page.html}}</div>
+        <div v-html="page.html" class="text">{{ page.html }}</div>
       </div>
     </main>
   </div>
 </template>
 
 <script>
-import { getPage } from '~/api/posts';
+import { getPage } from "~/api/posts";
 export default {
-  async asyncData () {
-    const page = await getPage('about-us');
-    return { page: page }
-  }
-}
+  async asyncData() {
+    const page = await getPage("about-us");
+    return { page: page };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.container{
-
-  .video iframe{
-    margin:1em 0 1em;
+.container {
+  .video iframe {
+    margin: 1em 0 1em;
     min-height: 300px;
   }
 
-  .title{
+  .title {
     font-weight: bolder;
     font-size: 3em;
-    margin-top:1em;
+    margin-top: 1em;
   }
 
-  .read_time{
+  .read_time {
     font-size: 1.25em;
     color: #333333;
-    opacity: .5;
+    opacity: 0.5;
   }
 
-  .content{
+  .content {
     padding: 1em 0 3em;
 
-    /deep/ p{
-      margin-bottom:1em;
+    ::v-deep p {
+      margin-bottom: 1em;
       text-justify: auto;
       text-align: justify;
     }
   }
-
 }
 
-.video{
+.video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   margin-bottom: 2em;
 }
 
-.video iframe{
+.video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,8 +74,8 @@ export default {
   height: 100%;
 }
 
-@media only screen and(min-width: 768px){
-  .container{
+@media only screen and(min-width: 768px) {
+  .container {
     width: 50%;
   }
 }

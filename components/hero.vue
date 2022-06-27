@@ -1,11 +1,18 @@
 <template>
   <hooper :settings="hooperSettings">
-    <slide v-for="(heroPost,index) in heroPosts" :key="index">
-      <div class="hero" v-bind:style="{'background-image':'url('+heroPost.feature_image+')'}">
+    <slide v-for="(heroPost, index) in heroPosts" :key="index">
+      <div
+        class="hero"
+        v-bind:style="{
+          'background-image': 'url(' + heroPost.feature_image + ')',
+        }"
+      >
         <div class="container">
-          <h1 class="title">{{heroPost.title}}</h1>
-          <p class="excerpt">{{heroPost.meta_description}}</p>
-          <nuxt-link :to="{ path: '/featured/'+heroPost.slug}">{{heroPost.excerpt}} <i class="fas fa-arrow-right"></i></nuxt-link>
+          <h1 class="title">{{ heroPost.title }}</h1>
+          <p class="excerpt">{{ heroPost.meta_description }}</p>
+          <nuxt-link :to="{ path: '/featured/' + heroPost.slug }"
+            >{{ heroPost.excerpt }} <i class="fas fa-arrow-right"></i
+          ></nuxt-link>
         </div>
       </div>
     </slide>
@@ -17,114 +24,112 @@
         </div>
       </div>
     </slide> -->
-  <hooper-navigation slot="hooper-addons"></hooper-navigation>
-  <hooper-pagination slot="hooper-addons"></hooper-pagination>
+    <hooper-navigation slot="hooper-addons"></hooper-navigation>
+    <hooper-pagination slot="hooper-addons"></hooper-pagination>
   </hooper>
 </template>
 
 <script>
-import {getSinglePost} from '~/api/posts'
-import 'hooper/dist/hooper.css'
+import { getSinglePost } from "~/api/posts";
+import "hooper/dist/hooper.css";
 import {
   Hooper,
   Slide,
   Navigation as HooperNavigation,
-  Pagination as HooperPagination
-  } from 'hooper';
+  Pagination as HooperPagination,
+} from "hooper";
 export default {
-  name:'Hero',
-  components:{
+  name: "Hero",
+  components: {
     Hooper,
     Slide,
     HooperNavigation,
-    HooperPagination
+    HooperPagination,
   },
-  data(){
-    return{
-      hooperSettings:{
+  data() {
+    return {
+      hooperSettings: {
         centerMode: true,
-        pagination: "no"
-      }
-    }
+        pagination: "no",
+      },
+    };
   },
-  props:{
-    heroPosts:Array
-  }
-
-}
+  props: {
+    heroPosts: Array,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
-.hooper{
+.hooper {
   height: 40vh;
 }
 
- /deep/ svg.icon.icon-arrowRight{
-  fill:white!important;
+::v-deep svg.icon.icon-arrowRight {
+  fill: white !important;
 }
- /deep/ svg.icon.icon-arrowLeft{
-  fill:white!important;
+::v-deep svg.icon.icon-arrowLeft {
+  fill: white !important;
 }
 
-.hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color:white;
+  color: white;
   height: 40vh;
-  .container{
+  .container {
     align-items: center;
 
-    h2{
+    h2 {
       padding: 1em 0 1em;
       text-transform: uppercase;
     }
 
-    h1{
+    h1 {
       // padding: 0 0 .5em;
-      font-size:3em;
-      font-weight: bold!important;
-      margin:0
+      font-size: 3em;
+      font-weight: bold !important;
+      margin: 0;
     }
 
-    .excerpt{
+    .excerpt {
       font-size: 1.2em;
       padding: 0 0 2em;
       margin-bottom: 1em;
       font-weight: 500;
     }
 
-    a{
+    a {
       text-decoration: none;
-      color:white;
-      background:#48c774;
-      padding: .5em 1.5em .5em;
-      border-radius: .5em;
+      color: white;
+      background: #48c774;
+      padding: 0.5em 1.5em 0.5em;
+      border-radius: 0.5em;
       text-transform: uppercase;
       font-weight: 300;
       transition: background 0.2s linear;
       border: solid 2px #48c774;
     }
 
-    a:hover{
-      color:#48c774;
-      background:transparent;
+    a:hover {
+      color: #48c774;
+      background: transparent;
       font-weight: bold;
     }
   }
 }
 
-@media only screen and (min-width:1000px){
-  .hero{
+@media only screen and (min-width: 1000px) {
+  .hero {
     height: 45vh;
   }
-  .hooper{
-  height: 45vh;
-}
+  .hooper {
+    height: 45vh;
+  }
 }
 </style>
