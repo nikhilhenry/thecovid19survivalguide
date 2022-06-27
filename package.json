@@ -18,7 +18,8 @@
     "nuxt": "^2.0.0",
     "sass": "^1.53.0",
     "sass-loader": "^10",
-    "vue-scrollto": "^2.18.1"
+    "vue-scrollto": "^2.18.1",
+    "@nuxtjs/style-resources": "^1.2.1"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1"
