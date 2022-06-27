@@ -6,9 +6,9 @@ feature_image: https://web.archive.org/web/20210522201910im_/https://unavocaghos
 ---
 
 As the vastly growing global pandemic continues to reshape our societies and lifestyles, the industry powering the 21 century is also undergoing a shift in paradigm.
-<!--more-->
- Today, Big Tech faces a startling opportunity to both recorrect its wrongs and a pave new ways for positive collaboration and supplement society.
+Today, Big Tech faces a startling opportunity to both recorrect its wrongs and a pave new ways for positive collaboration and supplement society.
 
+<!--more-->
 
 
 Medical research papers and countries like South Korea have revealed contact tracing as the secret to combating the virus. Thus, companies such as Apple and Google, fierce rivals in the tech space have collaborated on interconnected solutions leveraging the BlueTooth capabilities of a smartphone. Through this Application Programming Interface they aim to provide governments with a more accessible and low-cost solution to implement contact tracing effectively. Demonstrating that there has never been a more important moment to work together to solve one of the world’s most pressing problems.

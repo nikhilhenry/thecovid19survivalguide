@@ -54,6 +54,9 @@ main {
     flex-direction: column;
     border-bottom: 1px solid #dfe4e7;
     cursor: pointer;
+    h2:hover {
+      text-decoration: underline;
+    }
     img {
       height: 200px;
       width: 100%;
@@ -140,6 +143,12 @@ main {
     display: grid;
     grid-template-columns: 50% auto;
     grid-column-gap: 1em;
+    article {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 50% auto;
+      grid-column-gap: 1em;
+    }
     img {
       height: 300px;
       margin: 0 0 1em;
