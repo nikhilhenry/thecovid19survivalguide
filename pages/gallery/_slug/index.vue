@@ -2,17 +2,11 @@
   <div class="container">
     <main>
       <img :src="post.feature_image" />
-      <h2 class="date">{{ post.date }}</h2>
       <h1 class="title">{{ post.title }}</h1>
       <div class="content">
-        <div v-html="post.html" class="text">{{ post.html }}</div>
+        <nuxt-content :document="post" class="text" />
         <span class="author">By </span
-        ><span
-          class="author name"
-          v-for="author in post.authors"
-          :key="author.index"
-          >{{ author.name }}</span
-        >
+        ><span class="author name">{{ post.author }}</span>
       </div>
     </main>
   </div>
@@ -21,18 +15,8 @@
 <script>
 import { getSinglePost } from "~/api/posts";
 export default {
-  async asyncData({ params }) {
-    const post = await getSinglePost(params.slug);
-
-    var d = new Date(post.published_at);
-    var date_string =
-      d.toLocaleString("default", { month: "long" }).toUpperCase() +
-      " " +
-      d.getDate() +
-      ", " +
-      d.getFullYear();
-    post.date = date_string;
-    console.log(post.author);
+  async asyncData({ $content, params }) {
+    const post = await $content(`/gallery/${params.slug}`).fetch();
     return { post: post };
   },
 };
