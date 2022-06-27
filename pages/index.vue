@@ -167,7 +167,7 @@ export default {
     };
   },
   async asyncData({ $content }) {
-    const heroPosts = await $content("hero").fetch();
+    const heroPosts = await $content("hero").sortBy("title", "desc").fetch();
     const posts = await $content("posts").fetch();
     // console.log(posts)
     return { posts: posts, heroPosts: heroPosts };
