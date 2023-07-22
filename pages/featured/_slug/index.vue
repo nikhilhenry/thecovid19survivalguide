@@ -60,7 +60,7 @@ export default {
   height: auto;
 }
 
-@media only screen and(min-width:900px) {
+@media only screen and (min-width:900px) {
   .container {
     width: 50%;
   }
@@ -70,7 +70,7 @@ export default {
   }
 }
 
-@media only screen and(min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .full_image {
     display: flex;
     flex-direction: column;
